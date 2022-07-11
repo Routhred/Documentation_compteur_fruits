@@ -230,8 +230,6 @@ Pour créer des codes-barres, ouvrir l'onglet Cades-barres>Créer.
 - Séléctionner l'employé voulu grâce à la liste déroulante
 - Sélectionner le nombre de codes voulus (entre 0 et 200)
 
-![](source/creation_code_barre.png)
-
 ### <a name="Reset_codes_barres">Remise à zéro des codes-barres</a>
 
 
