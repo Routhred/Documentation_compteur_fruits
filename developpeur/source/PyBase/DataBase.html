@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>DataBase &mdash; Documentation Compteur_production </title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Recherche" href="../../search.html" />
+    <link rel="next" title="Table" href="Table.html" />
+    <link rel="prev" title="PyBase" href="../PyBase.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Compteur_production
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Main.html">Main</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../PyBase.html">PyBase</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">DataBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Table.html">Table</a></li>
+<li class="toctree-l2"><a class="reference internal" href="EmployeTable.html">EmployeTable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ParcelleTable.html">ParcelleTable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TravailTable.html">TravailTable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RecolteTable.html">RecolteTable</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Balance.html">Balance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Barcode.html">Barcode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Interface.html">Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Imprimante.html">Imprimante</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PdfMaker.html">PdfMaker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Utils.html">Utils</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Compteur_production</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../PyBase.html">PyBase</a> &raquo;</li>
+      <li>DataBase</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/source/PyBase/DataBase.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="database">
+<h1>DataBase<a class="headerlink" href="#database" title="Lien permanent vers cette rubrique"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="PyBase.DataBase">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">PyBase.</span></span><span class="sig-name descname"><span class="pre">DataBase</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nom</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyBase.DataBase" title="Lien permanent vers cette définition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><p><strong>nom</strong> (<em>str</em>) – Nom de la base de données</p>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>nom</strong> (<em>str</em>) – Nom de la base de données</p></li>
+<li><p><strong>con</strong> (<em>sqlite3.Connection</em>) – Connecteur à la base</p></li>
+<li><p><strong>tables</strong> (<em>list</em><em>(</em><a class="reference internal" href="Table.html#PyBase.Table" title="PyBase.Table"><em>Table</em></a><em>)</em>) – liste des tables de la base</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="PyBase.DataBase.addJour">
+<span class="sig-name descname"><span class="pre">addJour</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">code</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">poids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">float</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyBase.DataBase.addJour" title="Lien permanent vers cette définition"></a></dt>
+<dd><p>Ajoute un seau à toutes les tables nécessaires</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>code</strong> (<em>str</em>) – code barre de l’ouvrier à enregistrer</p></li>
+<li><p><strong>poids</strong> (<em>float</em>) – poids du seau pesé</p></li>
+</ul>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p>-3 si le code n’est pas valide</p>
+</dd>
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p>-2 si le code n’existe pas</p>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p>-1 si le code a deja ete utilise</p>
+</dd>
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p>0 si tout c’est bien passé</p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyBase.DataBase.addTable">
+<span class="sig-name descname"><span class="pre">addTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">table</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyBase.DataBase.addTable" title="Lien permanent vers cette définition"></a></dt>
+<dd><p>Ajoute une table à la liste des tables de la base de données</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><p><strong>table</strong> (<a class="reference internal" href="Table.html#PyBase.Table" title="PyBase.Table"><em>Table</em></a>) – </p>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyBase.DataBase.afficherDb">
+<span class="sig-name descname"><span class="pre">afficherDb</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#PyBase.DataBase.afficherDb" title="Lien permanent vers cette définition"></a></dt>
+<dd><p>Affiche une base de données</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyBase.DataBase.close">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#PyBase.DataBase.close" title="Lien permanent vers cette définition"></a></dt>
+<dd><p>Ferme toutes les connexions existantes avec les tables pour fermer la base de données</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyBase.DataBase.creerRepos">
+<span class="sig-name descname"><span class="pre">creerRepos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">jour</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">titre_travail</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyBase.DataBase.creerRepos" title="Lien permanent vers cette définition"></a></dt>
+<dd><p>Ajoute un jour de repos à la table titre_travail à la date jour
+Si la table n’existe pas, on ne fait rien</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>jour</strong> (<em>list</em>) – [AAAA,MM,JJ] debut du travail</p></li>
+<li><p><strong>titre_travail</strong> (<em>str</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyBase.DataBase.creerTableEmploye">
+<span class="sig-name descname"><span class="pre">creerTableEmploye</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#PyBase.DataBase.creerTableEmploye" title="Lien permanent vers cette définition"></a></dt>
+<dd><p>Crée une table de type employe et la renvoie
+Il ne peut y avoir qu’une seule table employé par base de données
+Si il existe déjà une table de ce type, on la renvoie
+On renvoie rien si il existe deja une table parcelle dans la base</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p>La table qui vient d’être créée</p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p><a class="reference internal" href="Table.html#PyBase.Table" title="PyBase.Table">Table</a></p>
+</dd>
+<dt class="field-odd">Type renvoyé</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyBase.DataBase.creerTableParcelle">
+<span class="sig-name descname"><span class="pre">creerTableParcelle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#PyBase.DataBase.creerTableParcelle" title="Lien permanent vers cette définition"></a></dt>
+<dd><p>Crée une table de type parcelle et la renvoie
+Il ne peut y avoir qu’une seule table parcelle par base de données
+Dans une base de données, la table parcelle doit être seule, il ne peut pas y avoir plusieurs tables parcelles
+ou une table employe avec une table parcelle
+Si il existe déjà une table de ce type, on la renvoie</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p>La table qui vient d’être créée</p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p><a class="reference internal" href="Table.html#PyBase.Table" title="PyBase.Table">Table</a></p>
+</dd>
+<dt class="field-odd">Type renvoyé</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyBase.DataBase.creerTravail">
+<span class="sig-name descname"><span class="pre">creerTravail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">debut</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">titre_travail</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyBase.DataBase.creerTravail" title="Lien permanent vers cette définition"></a></dt>
+<dd><p>Ajoute une période de travail à la table titre_travail entre les dates debut et fin
+La date de debut doit être inférieur à la date de fin
+Si la table n’existe pas, on ne fait rien</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>debut</strong> (<em>list</em>) – [AAAA,MM,JJ] debut du travail</p></li>
+<li><p><strong>fin</strong> (<em>list</em>) – [AAAA,MM,JJ] fin du travail</p></li>
+<li><p><strong>titre_travail</strong> (<em>str</em>) – </p></li>
+</ul>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyBase.DataBase.getCon">
+<span class="sig-name descname"><span class="pre">getCon</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#PyBase.DataBase.getCon" title="Lien permanent vers cette définition"></a></dt>
+<dd><p>Retourne le connecteur à la base</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p>con</p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p>sqlite3.Connection</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyBase.DataBase.getDb">
+<span class="sig-name descname"><span class="pre">getDb</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#PyBase.DataBase.getDb" title="Lien permanent vers cette définition"></a></dt>
+<dd><p>Retourne la base de données</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p>base de donnée</p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p><a class="reference internal" href="#PyBase.DataBase" title="PyBase.DataBase">DataBase</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyBase.DataBase.getNom">
+<span class="sig-name descname"><span class="pre">getNom</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#PyBase.DataBase.getNom" title="Lien permanent vers cette définition"></a></dt>
+<dd><p>Retourne le nom de la base de données</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p>nom de la base de données</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyBase.DataBase.getTable">
+<span class="sig-name descname"><span class="pre">getTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">titre</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyBase.DataBase.getTable" title="Lien permanent vers cette définition"></a></dt>
+<dd><p>Retourne la table ayant le titre: titre</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><p><strong>titre</strong> (<em>str</em>) – Titre de la table recherchée</p>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p>table</p>
+</dd>
+<dt class="field-odd">Type renvoyé</dt>
+<dd class="field-odd"><p><a class="reference internal" href="Table.html#PyBase.Table" title="PyBase.Table">Table</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyBase.DataBase.getTables">
+<span class="sig-name descname"><span class="pre">getTables</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#PyBase.DataBase.getTables" title="Lien permanent vers cette définition"></a></dt>
+<dd><p>Retourne la liste des tables</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p>liste des tables</p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p><a class="reference internal" href="Table.html#PyBase.Table" title="PyBase.Table">Table</a>[]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyBase.DataBase.isInDb">
+<span class="sig-name descname"><span class="pre">isInDb</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">titre</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyBase.DataBase.isInDb" title="Lien permanent vers cette définition"></a></dt>
+<dd><p>Cherche si la table titre est dans la base, si oui renvoie la table, sinon renvoie False</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><p><strong>titre</strong> (<em>str</em>) – titre de la table</p>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p>table or False</p>
+</dd>
+<dt class="field-odd">Type renvoyé</dt>
+<dd class="field-odd"><p><a class="reference internal" href="Table.html#PyBase.Table" title="PyBase.Table">Table</a></p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p>bool</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyBase.DataBase.loadDb">
+<span class="sig-name descname"><span class="pre">loadDb</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#PyBase.DataBase.loadDb" title="Lien permanent vers cette définition"></a></dt>
+<dd><p>Charge une base de données avec toutes ses tables</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyBase.DataBase.majProd">
+<span class="sig-name descname"><span class="pre">majProd</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#PyBase.DataBase.majProd" title="Lien permanent vers cette définition"></a></dt>
+<dd><p>Met à jour les production de touts les ouvriers dans les colonnes semaine, mois, saison de la table employe</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyBase.DataBase.resetDbEmploye">
+<span class="sig-name descname"><span class="pre">resetDbEmploye</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#PyBase.DataBase.resetDbEmploye" title="Lien permanent vers cette définition"></a></dt>
+<dd><p>Crée une sauvegarde de la base sous le nom : {nom}_{today}_save.db
+Reset une base de données employe en ne gardant que les employés non saisonnier dans la table employe
+Sinon, tout est supprimé
+Cette fonction à pour but d’être utilisé au début d’une nouvelle saison</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyBase.DataBase.resetDbParcelle">
+<span class="sig-name descname"><span class="pre">resetDbParcelle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#PyBase.DataBase.resetDbParcelle" title="Lien permanent vers cette définition"></a></dt>
+<dd><p>Reset une base de donnée parcelle
+On remet tous les poids de récolte à 0</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyBase.DataBase.supprimerTable">
+<span class="sig-name descname"><span class="pre">supprimerTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">titre</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyBase.DataBase.supprimerTable" title="Lien permanent vers cette définition"></a></dt>
+<dd><p>Supprime une table de la base ayant le titre titre</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><p><strong>titre</strong> (<em>str</em>) – </p>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="../PyBase.html" class="btn btn-neutral float-left" title="PyBase" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="Table.html" class="btn btn-neutral float-right" title="Table" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Romain SERPOLLET.</p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

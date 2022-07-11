@@ -1,0 +1,5 @@
+PdfMaker
+========
+
+.. automodule:: pdf_maker
+    :members:

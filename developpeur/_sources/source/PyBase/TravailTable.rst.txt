@@ -1,0 +1,5 @@
+TravailTable
+============
+
+.. autoclass:: PyBase.TravailTable
+    :members:

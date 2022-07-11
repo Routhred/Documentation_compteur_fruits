@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Interface &mdash; Documentation Compteur_production </title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Recherche" href="../search.html" />
+    <link rel="next" title="Imprimante" href="Imprimante.html" />
+    <link rel="prev" title="Barcode" href="Barcode.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> Compteur_production
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Main.html">Main</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PyBase.html">PyBase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Balance.html">Balance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Barcode.html">Barcode</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Imprimante.html">Imprimante</a></li>
+<li class="toctree-l1"><a class="reference internal" href="PdfMaker.html">PdfMaker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Utils.html">Utils</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">Compteur_production</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Interface</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/source/Interface.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="interface">
+<h1>Interface<a class="headerlink" href="#interface" title="Lien permanent vers cette rubrique"></a></h1>
+<span class="target" id="module-Interface"></span><dl class="py class">
+<dt class="sig sig-object py" id="Interface.Ui_MainWindow">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">Interface.</span></span><span class="sig-name descname"><span class="pre">Ui_MainWindow</span></span><a class="headerlink" href="#Interface.Ui_MainWindow" title="Lien permanent vers cette définition"></a></dt>
+<dd><p>Class représentant la fenêtre principale du programme</p>
+<a class="reference internal image-reference" href="../_images/Interface.png"><img alt="Image Interface" src="../_images/Interface.png" style="width: 400px;" /></a>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><p><strong>MainWindow</strong> (<em>MainWindow</em>) – fenetre principale</p>
+</dd>
+<dt class="field-even">Ivar</dt>
+<dd class="field-even"><p>tous les elements graphiques</p>
+</dd>
+<dt class="field-odd">Variables</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>b</strong> (<a class="reference internal" href="Balance.html#balance.Balance" title="balance.Balance"><em>Balance</em></a>) – balance connectée au pc</p></li>
+<li><p><strong>window</strong> (<em>MainWindow</em>) – fenetre principale du projet</p></li>
+<li><p><strong>ui</strong> (<em>Ui_Form</em>) – fenetre annexe en cours</p></li>
+<li><p><strong>db_employe</strong> (<a class="reference internal" href="PyBase/DataBase.html#PyBase.DataBase" title="PyBase.DataBase"><em>DataBase</em></a>) – base de donnée employée en cours d’utilisation</p></li>
+<li><p><strong>db_parcelle</strong> (<a class="reference internal" href="PyBase/DataBase.html#PyBase.DataBase" title="PyBase.DataBase"><em>DataBase</em></a>) – base de donnée parcelle en cours d’utilisation</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="Interface.Ui_MainWindow.actionscanner">
+<span class="sig-name descname"><span class="pre">actionscanner</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Interface.Ui_MainWindow.actionscanner" title="Lien permanent vers cette définition"></a></dt>
+<dd><p>Cette fonction est appelé lors du scan d’un code barre</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Interface.Ui_MainWindow.ecire">
+<span class="sig-name descname"><span class="pre">ecire</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Interface.Ui_MainWindow.ecire" title="Lien permanent vers cette définition"></a></dt>
+<dd><p>Ecrit un message dans le champs info de l’interface</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><p><strong>msg</strong> (<em>str</em>) – </p>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Interface.Ui_MainWindow.getParcelle">
+<span class="sig-name descname"><span class="pre">getParcelle</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Interface.Ui_MainWindow.getParcelle" title="Lien permanent vers cette définition"></a></dt>
+<dd><p>Retourne la parcelle selectionnée dans la combobox</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p>parcelle</p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p>str</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Interface.Ui_MainWindow.lancerFenetre">
+<span class="sig-name descname"><span class="pre">lancerFenetre</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Interface.Ui_MainWindow.lancerFenetre" title="Lien permanent vers cette définition"></a></dt>
+<dd><p>Lance la fenetre numero id: <br />
+1 : afficher_ouvrier            -&gt; choisir un ouvrier à afficher <br />
+2 : afficher_ouvrier_liste      -&gt; affiche la liste des ouvriers <br />
+3 : afficher_ouvrier_tableau    -&gt; affiche le tableau d’un ouvrier <br />
+4 : afficher_parcelle_liste     -&gt; affiche la liste des parcelles <br />
+5 : ajout_conges                -&gt; creer des congés pour un ouvrier donné <br />
+6 : ajout_employe               -&gt; creer une nouvelle entrée pour un ouvrier <br />
+7 : ajout_parcelle              -&gt; creer une nouvelle entrée pour un parcelle <br />
+8 : ajout_travail               -&gt; creer une periode de travail pour un ouvrier donné <br />
+9 : creer_code                  -&gt; creer des codes barres <br />
+10 : modifier_parcelle          -&gt; modifier une parcelle deja créée <br />
+11 : supprimer_employe          -&gt; supprimer un ouvrier de la base de données <br />
+12 : supprimer_parcelle         -&gt; supprimer une parcelle de la base <br />
+13 : creer_base                 -&gt; creer une base de données <br />
+14 : actionReset                -&gt; reset la base de données ouverte <br />
+15 : actionContenant            -&gt; prend en compte le poids du contenant <br />
+16 : actionPoids                -&gt; faire une moyenne des poids d’un contenant plein <br />
+17 : actionStat                 -&gt; generer des statistiques <br />
+18 : select_poids               -&gt; choisir un poids fixe lorsque la balance ne fonctionne pas par exemple</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><p><strong>id</strong> (<em>int</em>) – numero de fenetre</p>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Interface.Ui_MainWindow.resetCode">
+<span class="sig-name descname"><span class="pre">resetCode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Interface.Ui_MainWindow.resetCode" title="Lien permanent vers cette définition"></a></dt>
+<dd><p>Reset tous les fichiers de sauvegarde des codes barre</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Interface.Ui_MainWindow.retranslateUi">
+<span class="sig-name descname"><span class="pre">retranslateUi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">MainWindow</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Interface.Ui_MainWindow.retranslateUi" title="Lien permanent vers cette définition"></a></dt>
+<dd><p>Ecrit tous les texts dans les emplacements graphiques</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><p><strong>MainWindow</strong> (<em>MainWindow</em>) – fenetre principale</p>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Interface.Ui_MainWindow.setupUi">
+<span class="sig-name descname"><span class="pre">setupUi</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">MainWindow</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#Interface.Ui_MainWindow.setupUi" title="Lien permanent vers cette définition"></a></dt>
+<dd><p>Initialise tout le programme</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><p><strong>MainWindow</strong> (<em>Mainwindow</em>) – fenetre principale</p>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="Interface.Ui_MainWindow.update">
+<span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#Interface.Ui_MainWindow.update" title="Lien permanent vers cette définition"></a></dt>
+<dd><p>Fonction qui s’execute toutes les 500ms pour mettre a jour les données et l’interface graphique</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="Barcode.html" class="btn btn-neutral float-left" title="Barcode" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="Imprimante.html" class="btn btn-neutral float-right" title="Imprimante" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Romain SERPOLLET.</p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

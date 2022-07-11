@@ -1,0 +1,5 @@
+ParcelleTable
+=============
+
+.. autoclass:: PyBase.ParcelleTable
+    :members:

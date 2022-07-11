@@ -1,0 +1,6 @@
+Barcode
+=======
+
+
+.. automodule:: barcode
+    :members:

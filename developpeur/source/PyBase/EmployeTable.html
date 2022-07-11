@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="fr" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>EmployeTable &mdash; Documentation Compteur_production </title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/translations.js"></script>
+    <script src="../../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Recherche" href="../../search.html" />
+    <link rel="next" title="ParcelleTable" href="ParcelleTable.html" />
+    <link rel="prev" title="Table" href="Table.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../../index.html" class="icon icon-home"> Compteur_production
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Rechercher docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../Main.html">Main</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="../PyBase.html">PyBase</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="DataBase.html">DataBase</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Table.html">Table</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">EmployeTable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ParcelleTable.html">ParcelleTable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="TravailTable.html">TravailTable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="RecolteTable.html">RecolteTable</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../Balance.html">Balance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Barcode.html">Barcode</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Interface.html">Interface</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Imprimante.html">Imprimante</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../PdfMaker.html">PdfMaker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Utils.html">Utils</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">Compteur_production</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="../PyBase.html">PyBase</a> &raquo;</li>
+      <li>EmployeTable</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../../_sources/source/PyBase/EmployeTable.rst.txt" rel="nofollow"> Afficher la source de la page</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="employetable">
+<h1>EmployeTable<a class="headerlink" href="#employetable" title="Lien permanent vers cette rubrique"></a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="PyBase.EmployeTable">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">PyBase.</span></span><span class="sig-name descname"><span class="pre">EmployeTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">con</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Connection</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">db</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="DataBase.html#PyBase.DataBase" title="PyBase.DataBase"><span class="pre">DataBase</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyBase.EmployeTable" title="Lien permanent vers cette définition"></a></dt>
+<dd><p>Table employe d’une base de données</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>mode</strong> (<em>bool</em>) – si on doit créer une nouvelle table ou non</p></li>
+<li><p><strong>con</strong> (<em>sqlite3.Connection</em>) – connecteur à la base</p></li>
+<li><p><strong>db</strong> (<a class="reference internal" href="DataBase.html#PyBase.DataBase" title="PyBase.DataBase"><em>DataBase</em></a>) – base de données parent</p></li>
+</ul>
+</dd>
+<dt class="field-even">Variables</dt>
+<dd class="field-even"><ul class="simple">
+<li><p><strong>con</strong> (<em>sqlite3.Connection</em>) – connecteur à la base de données</p></li>
+<li><p><strong>db</strong> (<a class="reference internal" href="DataBase.html#PyBase.DataBase" title="PyBase.DataBase"><em>DataBase</em></a>) – base de données de la table</p></li>
+<li><p><strong>mode</strong> (<em>bool</em>) – si on doit créer une nouvelle table ou non</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="PyBase.EmployeTable.creerConges">
+<span class="sig-name descname"><span class="pre">creerConges</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">debut</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">np</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyBase.EmployeTable.creerConges" title="Lien permanent vers cette définition"></a></dt>
+<dd><p>Crée une période de congés pour un ouvrier np de debut jusqu’a fin
+Si l’ouvrier n’existe pas, on ne fait rien</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>debut</strong> (<em>list</em>) – [AAA,MM,JJ]</p></li>
+<li><p><strong>fin</strong> (<em>list</em>) – [AAA,MM,JJ]</p></li>
+<li><p><strong>np</strong> (<em>list</em>) – (nom:str, prenom(s):str) de l’ouvrier</p></li>
+</ul>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyBase.EmployeTable.creerRepos">
+<span class="sig-name descname"><span class="pre">creerRepos</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">repos</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">np</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyBase.EmployeTable.creerRepos" title="Lien permanent vers cette définition"></a></dt>
+<dd><p>Crée un jour de repos pour un ouvrier np à la date repos
+Cet jour va se traduire par un -1 à la date repos dans la base de donnée</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>repos</strong> (<em>list</em>) – [AAA,MM,JJ]</p></li>
+<li><p><strong>np</strong> (<em>list</em>) – (nom:str, prenom(s):str) de l’ouvrier</p></li>
+</ul>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyBase.EmployeTable.creerTravail">
+<span class="sig-name descname"><span class="pre">creerTravail</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">debut</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">fin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">np</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyBase.EmployeTable.creerTravail" title="Lien permanent vers cette définition"></a></dt>
+<dd><p>Crée une période de travail de jour debut jusqu’à jour fin pour l’ouvrier np
+Ne fait rien si l’ouvrier n’existe pas
+:param list debut: [AAA,MM,JJ]
+:param list fin: [AAA,MM,JJ]
+:param list np: (nom:str, prenom(s):str) de l’ouvrier
+:return: None</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyBase.EmployeTable.findIdFree">
+<span class="sig-name descname"><span class="pre">findIdFree</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#PyBase.EmployeTable.findIdFree" title="Lien permanent vers cette définition"></a></dt>
+<dd><p>Trouve le premier identifiant libre pour un nouvel ouvrier</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p>id</p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyBase.EmployeTable.getEmploye">
+<span class="sig-name descname"><span class="pre">getEmploye</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#PyBase.EmployeTable.getEmploye" title="Lien permanent vers cette définition"></a></dt>
+<dd><p>Fonction qui retourne la liste de tous les employés d’une table</p>
+<dl class="field-list simple">
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p>liste des employes</p>
+</dd>
+<dt class="field-even">Type renvoyé</dt>
+<dd class="field-even"><p>list</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyBase.EmployeTable.initLigne">
+<span class="sig-name descname"><span class="pre">initLigne</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">np</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">saisonnier</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">id</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyBase.EmployeTable.initLigne" title="Lien permanent vers cette définition"></a></dt>
+<dd><p>Permet de crée un ouvrier qui s’appelle np:=(nom:str, prenom(s):str).
+L’identifiant est optionnel, si on ne le connait pas le programme en calcul un tout seul</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>np</strong> (<em>list</em>) – (nom:str, prenom(s):str) de l’ouvrier</p></li>
+<li><p><strong>saisonnier</strong> (<em>bool</em>) – Si c’est un saisonnier ou non</p></li>
+<li><p><strong>id</strong> (<em>int</em>) – identifiant de l’ouvrier</p></li>
+</ul>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyBase.EmployeTable.isInTable">
+<span class="sig-name descname"><span class="pre">isInTable</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">np</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyBase.EmployeTable.isInTable" title="Lien permanent vers cette définition"></a></dt>
+<dd><p>Cherche un ouvrier dans la table employe</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><p><strong>np</strong> (<em>list</em>) – (nom:str, prenom(s):str) de l’ouvrier</p>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p>int id: retourne l’identifiant de l’ouvrier si il existe</p>
+</dd>
+<dt class="field-odd">Renvoie</dt>
+<dd class="field-odd"><p>bool False: retourne False si l’ouvrier n’existe pas</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="PyBase.EmployeTable.supprimerEmploye">
+<span class="sig-name descname"><span class="pre">supprimerEmploye</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">select</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">list</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#PyBase.EmployeTable.supprimerEmploye" title="Lien permanent vers cette définition"></a></dt>
+<dd><p>Supprime un employe et les tables qui lui sont associées</p>
+<dl class="field-list simple">
+<dt class="field-odd">Paramètres</dt>
+<dd class="field-odd"><p><strong>select</strong> (<em>list</em>) – cle à selectionner pour choisir la ligne à supprimer</p>
+</dd>
+<dt class="field-even">Renvoie</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
+        <a href="Table.html" class="btn btn-neutral float-left" title="Table" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="ParcelleTable.html" class="btn btn-neutral float-right" title="ParcelleTable" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, Romain SERPOLLET.</p>
+  </div>
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
